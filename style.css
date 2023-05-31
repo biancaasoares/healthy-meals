@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    font-family: 'Inter', sans-serif;
+    background-color: #212121;
+    background-image: url(./img/MacBook\ Pro\ -\ 2.svg);
+}
+
+header{
+    height:11vh;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+footer{
+    background-color:#E19A2F;
+    height: 10vh;
+}
+
+main{
+    display: flex;
+    place-items: center;
+}
+
+.titles{
+    display: inline-flex;
+    gap: 65px;
+    color: white;
+    place-items: center;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+
+
+.description{
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 50px;
+    font-style: italic;
+    color: white;
+    gap: 20px;
+}
+
+.description__title{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.description__text{
+    font-size: 24px;
+}
+
+.botao{
+    width: 241px;
+    height: 73px;
+    border-radius: 30px;
+    background-color: #E19A2F;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.botao a{
+    place-self: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.logo{
+    display: none;
+}
+
+.menu{
+    display: none;
+}
+
+.menu__mobile{
+    display: none;
+}
+
+@media(max-width:790px){
+
+    .titles{
+        display: none;
+    }
+
+    .menu{
+        display: inline-flex;
+        padding: 10px 10px;
+    }
+
+    body{
+        background-image: url(./img/iPad\ mini\ 8.3\ -\ 1.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .description__title{
+        font-size: 24px;
+    }
+
+    .description__text{
+        font-size: 20px;
+        width: 60%;
+    }
+
+    footer{
+        height: 9vh;
+    }
+
+}
+
+@media(max-width:376px){
+    
+    body{
+        background-image: url(./img/mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu__mobile{
+        display: flex;
+        padding: 10px 10px;
+    }
+
+    .description__title{
+        font-size: 14px;
+    }
+
+    .description__text{
+        font-size: 12px;
+        width: 70%;
+    }
+
+    footer{
+        color: #212121;
+    }
+
+    .botao{
+        width: 120px;
+        height: 38px;
+    }
+
+    .botao a{
+        font-size: 14px;
+    }
+
+}
